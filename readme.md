@@ -1,4 +1,4 @@
-# Proyecto: software administrador de laboratorio clínico
+# software administrador de laboratorio clínico
 
 Hola! 👋 Si llegaste hasta aquí es porque te interesa saber de nuestro proyecto, bueno, somo el Team #1 del grupo 64 de **misión Tic 2022**, este es el proyecto del ciclo #4 el cual estamos desarrollando con el stack **MERN**
 
@@ -6,9 +6,9 @@ Hola! 👋 Si llegaste hasta aquí es porque te interesa saber de nuestro proyec
 
 ## Table of Contents
 
-- [Proyecto: software administrador de laboratorio clínico](#proyecto-software-administrador-de-laboratorio-clínico)
+- [software administrador de laboratorio clínico](#software-administrador-de-laboratorio-clínico)
   - [Table of Contents](#table-of-contents)
-    - [En qué consiste?](#en-qué-consiste)
+    - [¿En qué consiste?](#en-qué-consiste)
     - [Colaboradores](#colaboradores)
     - [Front End](#front-end)
     - [Screenshot](#screenshot)
@@ -18,7 +18,7 @@ Hola! 👋 Si llegaste hasta aquí es porque te interesa saber de nuestro proyec
     - [Screenshot](#screenshot-2)
   - [FAQs](#faqs)
    
-### En qué consiste?
+### ¿En qué consiste?
 ***
 Desarrollamos un software para el manejo y administración de ensayos de laboratorio, dentro de sus funcionalidades se encuentran
 
@@ -26,7 +26,7 @@ Desarrollamos un software para el manejo y administración de ensayos de laborat
 - Manejo de exámanes con fácil acceso para consulta por parte de los usuarios
 - Recordatorios para pacientes con condiciones que requieren chequeos recurrentes
   
-![Image text](https://www.softwaremedico.com.co/wp-content/uploads/2018/10/laboratorioclinico.png)
+  ![Image text](https://www.softwaremedico.com.co/wp-content/uploads/2018/10/laboratorioclinico.png)
 
 ### Colaboradores
 ***
@@ -37,6 +37,8 @@ El equipo se encuentra conformado por 5 personas, las cuales cumplen su respecti
 3. **Yenci Julieth Silva Oyola** *(Desarrolladora Back-End)*
 4. **Luis Guerra** *(Gestor del Proyecto)*
 5. **Diego Alejandro Moreno Pedroza** *(Tester)*
+
+
 ### Front End
 ***
 Write down the general informations of your project. 
