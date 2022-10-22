@@ -17,6 +17,7 @@ Hola! 👋 Si llegaste hasta aquí es porque te interesa saber de nuestro proyec
     - [Database](#database)
     - [Screenshot](#screenshot-2)
   - [FAQs](#faqs)
+ 
 ### ¿En qué consiste?
 ***
 Desarrollamos un software para el manejo y administración de ensayos de laboratorio, dentro de sus funcionalidades se encuentran
