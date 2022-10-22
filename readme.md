@@ -6,18 +6,13 @@ Hola! 👋 Si llegaste hasta aquí es porque te interesa saber de nuestro proyec
 
 ## Table of Contents
 
-- [software administrador de laboratorio clínico](#software-administrador-de-laboratorio-clínico)
-  - [Table of Contents](#table-of-contents)
-    - [¿En qué consiste?](#en-qué-consiste)
-    - [Colaboradores](#colaboradores)
-    - [Front End](#front-end)
-    - [Screenshot](#screenshot)
-    - [Back End](#back-end)
-    - [Screenshot](#screenshot-1)
-    - [Database](#database)
-    - [Screenshot](#screenshot-2)
-  - [FAQs](#faqs)
-   
+- [¿En qué consiste?](#en-qué-consiste)
+- [Colaboradores](#colaboradores)
+- [Front End](#front-end)
+- [Back End](#back-end)
+- [Database](#database)
+- [FAQs](#faqs)
+-    
 ### ¿En qué consiste?
 ***
 Desarrollamos un software para el manejo y administración de ensayos de laboratorio, dentro de sus funcionalidades se encuentran
