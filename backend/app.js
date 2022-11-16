@@ -8,6 +8,7 @@ var auth = require("./auth/main_auth")
 
 var pacientesRouter = require('./routes/pacientes.router');
 var usuariosRouter = require('./routes/usuarios.router')
+var resultadoRouter = require('./routes/resultados.router')
 
 var app = express();
 
@@ -17,15 +18,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //Mongo connection
 database.mongoConnect();
 
 app.use('/usuarios', usuariosRouter);
-app.use(auth)
+//app.use(auth)
 
 //Router
 app.use('/pacientes', pacientesRouter);
+
+//Forma de servir a los archivos pdfs ubicados en la ruta
+app.use('/public', express.static(`${__dirname}/storage/pdfs`))
+app.use('v1', resultadoRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
