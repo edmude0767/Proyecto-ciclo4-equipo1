@@ -1,7 +1,7 @@
 const config = {
     appConfig: {
-        host: localhost,
-        port: 8081
+        host: process.env.APP_HOST,
+        port: process.env.APP_PORT
     }
 }
 

@@ -1,8 +1,9 @@
-const express = require("express");
+const express = require('express')
 const upload = require('../libs/storage')
-const resultadosController = require("../controllers/pacientes.controller");
-const router = express.Router();
+const { addResultado } = require('../controllers/resultados.controller')
+const router = express.Router()
 
-router.post("/resultados", upload.single('resultado', resultadosController));
+router.post('/resultados', upload.single('resultado'), addResultado)
+/* router.get('/resultados', getResultados) */
 
-module.exports = router;    
+module.exports = router

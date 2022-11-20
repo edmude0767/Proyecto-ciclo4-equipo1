@@ -28,8 +28,12 @@ app.use('/usuarios', usuariosRouter);
 app.use('/pacientes', pacientesRouter);
 
 //Forma de servir a los archivos pdfs ubicados en la ruta
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
+
 app.use('/public', express.static(`${__dirname}/storage/pdfs`))
-app.use('v1', resultadoRouter)
+app.use('/v1', resultadoRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,7 +48,17 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+/*   res.render('error'); */
+  res.send('error');
 });
+
+//Mensajes para el control de puertos
+var listener = app.listen(8081, function(){
+  console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+});
+
+/* var listener = app.listen(3000, function(){
+  console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+}); */
 
 module.exports = app;
