@@ -1,4 +1,4 @@
-const Paciente = require("../models/pacientes.model");
+const Personal = require("../models/personal.model");
 
 let response = {
     msg: "",
@@ -6,7 +6,7 @@ let response = {
 }
 
 exports.create = function (req, res) {
-    let paciente = new Paciente({
+    let personal = new Personal({
         tipo_documento: req.body.tipo_documento,
         numero_documento: req.body.numero_documento,
         primer_nombre: req.body.primer_nombre,
@@ -20,7 +20,7 @@ exports.create = function (req, res) {
         fecha_nacimiento: req.body.fecha_nacimiento
     })
 
-    paciente.save(function (err) {
+    personal.save(function (err) {
         if (err) {
             console.log(err);
             response.exito = false;
@@ -35,19 +35,19 @@ exports.create = function (req, res) {
 }
 
 exports.find = function (req, res) {
-    Paciente.find(function (err, pacientes) {
-        res.json(pacientes)
+    Personal.find(function (err, personal) {
+        res.json(personal)
     })
 }
 
 exports.findOne = function (req, res) {
-    Paciente.findOne({ numero_documento: req.params.numero_documento}, function (err, paciente) {
-        res.json(paciente)
+    Personal.findOne({ numero_documento: req.params.numero_documento}, function (err, personal) {
+        res.json(personal)
     })
 }
 
 exports.update = function (req, res) {
-    let paciente = ({
+    let personal = ({
         tipo_documento: req.body.tipo_documento,
         numero_documento: req.body.numero_documento,
         primer_nombre: req.body.primer_nombre,
@@ -60,32 +60,32 @@ exports.update = function (req, res) {
         sexo: req.body.sexo,
         fecha_nacimiento: req.body.fecha_nacimiento
     })
-    Paciente.findOneAndUpdate(req.params.numero_documento, { $set: paciente }, function (err) {
+    Personal.findOneAndUpdate(req.params.numero_documento, { $set: personal }, function (err) {
         if (err) {
             console.error(err)
                 response.exito = false
-                response.msg = "Error al modificar el Paciente"
+                response.msg = "Error al modificar el usuario"
             res.json(response)
             return;
         }
         response.exito = true,
-            response.msg = "El Paciente se actualizo correctamente"
+            response.msg = "El usuario se actualizo correctamente"
         res.json(response)
     })
 }
 
 exports.remove = function (req, res) {
-    Paciente.findOneAndRemove({ numero_documento: req.params.numero_documento }, function (err) {
+    Personal.findOneAndRemove({ numero_documento: req.params.numero_documento }, function (err) {
         if (err) {
             console.error(err)
                 response.exito = false
-                response.msg = "Error al eliminar al paciente"
+                response.msg = "Error al eliminar al usuario"
             res.json(response)
             return;
         }
 
         response.exito = true
-            response.msg = "El paciente se ha eliminado correctamente"
+            response.msg = "El usuario se ha eliminado correctamente"
         res.json(response)
     })
 }

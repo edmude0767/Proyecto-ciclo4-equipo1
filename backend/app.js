@@ -6,6 +6,7 @@ var logger = require('morgan');
 var database = require('./config/database')
 var auth = require("./auth/main_auth")
 
+var personalRouter = require('./routes/personal.router');
 var pacientesRouter = require('./routes/pacientes.router');
 var usuariosRouter = require('./routes/usuarios.router')
 var resultadoRouter = require('./routes/resultados.router')
@@ -21,10 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Mongo connection
 database.mongoConnect();
 
+//Router
 app.use('/usuarios', usuariosRouter);
 //app.use(auth)
-
-//Router
+app.use('/personal', personalRouter);
 app.use('/pacientes', pacientesRouter);
 
 //Forma de servir a los archivos pdfs ubicados en la ruta
